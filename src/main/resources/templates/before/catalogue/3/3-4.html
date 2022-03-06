@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>3.4新的form元素</h1>
+
+<p>HTML5提供了三个新的form元素，分别是datalist、keygen和output、datalist元素规定输入域的选项列表，keygen元素提供一种用户验证的可靠方法，output元素用于不同类型的输出。
+</p>
+<h2>3.4.1 datalist 元素</h2>
+
+<p>datalist 元素用于辅助表单中文本框的输入，它定义一个列表选项，文本框的list 属性设置为datalist 的id 值，文本框会具有自动完成的特性。当用户在文本框输入值时，datalist 元素的内容以列表的形式显示在文本框底部。</p>
+<div>< form><br />
+
+    教材名称：<br />
+    < input list="books" /><br />
+
+    < datalist id="books"><br />
+
+    < option value="JavaSE  程序设计"/><br />
+
+    < option value="JavaEE  程序设计"/><br />
+
+    < option value="ASP.NET  程序设计"/><br />
+
+    < /datalist>
+    </form></div><br />
+
+
+<a href="/example?id=3/3-4-1" target="_blank">点击查看实例</a>
+
+<h2>3.4.2 keygen 元素</h2>
+
+<p>keygen元素提供了一种 新的基于浏览器的安全认证模式，当表单提交时会生成两个密钥，一个是私钥，一个是公钥，其中私钥存储在客户端，公钥与表单数据一起发送到服务器端，服务器端可以根据该公钥对客户端进行验证。</p>
+
+<h2>3.4.3 output 元素</h2>
+
+<p>output元素用于显示计算结果，-般由脚本触发。下面的代码实现了计算两个number元素数值之和的功能。</p>
+
+
+</body>
+</html>

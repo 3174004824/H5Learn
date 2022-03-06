@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>10.2.1Geolocation对象</h1>
+<p>Geolocation对象是在navigator对象中定义的，可以直接通过navigator.geolocation获取。Geolocation对象比较简单，只有3个方法，如表10-1所示。</p>
+<table border="1">
+    <tr>
+        <td>方法名</td>
+        <td>方法描述</td>
+    </tr>
+    <tr>
+        <td>getCorrentposition()</td>
+        <td>获取用户位置信息</td>
+    </tr>
+    <tr>
+        <td>watchPosition()</td>
+        <td>不断获取用户移动时位置信息</td>
+    </tr>
+    <tr>
+        <td>clearWatch()</td>
+        <td>停止watchPosition</td>
+    </tr>
+</table>
+
+<p>getCurrentPosition()方法的使用代码如下:</p>
+<p>navigator.geolocation.getCurrentPosition(successCallback,[errorCallback].positionOptions])</p>
+<p>getCorrentposition()该方法有三个参数;</p>
+<p>1.successCallback:获取地理信息请求得到用户允许后的回调方法。此回调方法带有一个对象参数，此对象表示获取到的用户位置信息，包含两个属性:coords(坐标信息)和 timestamp(时间戳)。coords属性包含7个值。</p>
+<p>2.positionOptions(可选项):定义geolocation选项，数据使用JSON格式表示,
+    可对三个属性进行设置,均为可选项.</p>
+<p>3.positionOptions(可选项):定义geolocation选项，数据使用JSON格式表示，可对三个属性进行设置,均为可选项
+</p>
+<p>watchPosition()方法</p>
+<p>此方法是异步的，当检测到设备的位置发生改变时，会返回设备的当前位置信息。其参数与getCurrentPosition()方法的参数相同。不同的是，该方法会返回一个值(watchId),这个值是位置监听对象的引用，通过clearWatch()传入该watchld即可停止对位置的监听,代码如下:
+</p>
+<p>clearWatch( )方法使用很简单，只需要将需要停止监听的“watchld”传入即可，代码如下:</p>
+<p>navigator.geolocation.clearWatch(watchId)
+</p>
+<h1>10.2.2使用百度地图定位</h1>
+<p>百度地图JavaScript API是一套由JavaScript语言编写的应用程序接口，可帮助开发者在网站中构建功能丰富、交互性强的地图应用，支持PC端和移动端基于浏览器的地图应用开发，且支持HTML5特性的地图开发。百度地图分为极速版与大众版，极速版专门针对简单功能的移动端浏览器开发，但目前不包含定位功能，因此本节将使用大众版进行示例演示。
+</p>
+</body>
+</html>

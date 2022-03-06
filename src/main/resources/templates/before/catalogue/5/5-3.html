@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+
+<body>
+<h1>5.3拖放文件</h1>
+<p>HTML5可以实现从本地文件夹拖动文件到浏览器中，利用FileReader对象读取文件内容，并进行后续操作。</p>
+<p>从本地文件夹中拖动图片文件到浏览器中，并在浏览器中显示该图片，代码如下：</p>
+<p>< !DOCTYPE html></p>
+<p>< html></p>
+<p>< head></p>
+<p>< metahttp-equiv="Content-Type"content="text/html;charset=UTF-8">< title></p>
+<p>< script type="text/ javascript "></p>
+<p>function dragover(e){</p>
+<p>e. stopPropagation ();</p>
+<p>e. preventDefault ;</p>
+<p>function dragDrop(e){;</p>
+<p>e. stopPropagation();</p>
+<p>e. preventDefault();</p>
+<p>var fleListe. dataTransfer . files:</p>
+<p>(var fleType=fleList[0]. type:</p>
+<p>var olmg-document. createElement (ling);</p>
+<p>var reader=new  FileReader ():</p>
+<p>var oDropBox =document. getElementById (dropBox^);</p>
+<p>if(fleType.indexOf(image")=-1){</p>
+<p>alert(必须是图形文件!)：</p>
+<p>return;</p>
+<p>reader. onload=function(e){</p>
+<p>olmg. src=this result;</p>
+<p>oDropBox.innerHTML=":</p>
+<p>oDropBox. appendChild (oImg);};</p>
+<p>reader. readAsDataURL (fileList[0I);};</p>
+<p>< style type="text/css"></p>
+<p>#dropBox{</p>
+<p>height:300px;</p>
+<p>border:lpx solid#015EAC</p>
+<p>color:#666</p>
+<p>< /style></p>
+<p>< /head></p>
+<p>< body></p>
+<p>< divid="dropBox"ondrop="dragDrop(event)"</p>
+<p>ondragover -"dragover(event)">拖曳图片到这里!< /div></p>
+<p>< /body></p>
+<p>< /html></p>
+<a href="/example?id=5/5-3-1" target="_blank">点击查看实例</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+#center_right {
+    width: 560px;
+    padding-left: 140px;
+    float: inherit;
+}
+
+.video-title {
+    font: 18px/28px 'Microsoft YaHei',Arial,sans-serif;
+    text-align: justify;
+}
+
+.c-link {
+    color: #242CCA;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.c-color-text {
+    color: #333;
+}
+
+.c-font-normal {
+    font: 13px/21px 'Microsoft YaHei',Arial,sans-serif;
+}

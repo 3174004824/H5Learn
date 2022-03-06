@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h2>4.3绘制图像</h2>
+
+<p>drawImage方法可以在画布上绘制图像。drawlmage 方法有三种用法:</p>
+&nbsp;&nbsp;&nbsp;&nbsp;✧drawlmage(imgx,y): 绘制定位的图像;<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;✧draw lmage(imgx,y,width,height):绘制定位的指定宽度、高度的图像；<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;✧drawlmage(img.sx. swidth,sheig.xyheigh,width):绘制定位剪切的指定宽度、高度的图像。<br />
+绘制定位的图像；
+创建HTML文件，代码如下：<br />
+<div>&lt;!doctype html&gt;<br />
+    &lt;html&gt;<br />
+    &lt;head&gt;<br />
+    &lt;meta charset=&quot;utf-8&quot;&gt;<br />
+    &lt;title&gt;应用图像&lt;/title&gt;<br />
+    &lt;/head&gt;<br />
+    &lt;body&gt;<br />
+    &lt;canvas id=&quot;mycanvas&quot; width=&quot;300&quot; height=&quot;150&quot; style=&quot;border:1px solid #d3d3d3&quot;&gt;<br />
+    &lt;/canvas&gt;<br />
+    &lt;script&gt;<br />
+    var c= document.getElementById(&quot;mycanvas&quot;);<br />
+    var cxt= c.getContext(&quot;2d&quot;);<br />
+    var img= new Image();<br />
+    img.onload = function(){<br />
+    cxt.drawImage(img,50,25,200,100);<br />
+    }<br />
+    img.src = &quot;图片/head.jpg&quot;;<br />
+    &lt;/script&gt;<br />
+    &lt;/body&gt;<br />
+    &lt;/head&gt;<br />
+</div><br />
+
+
+
+</body>
+</html>

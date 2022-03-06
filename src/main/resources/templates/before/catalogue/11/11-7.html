@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+    <script type="text/JavaScript">
+        <!--
+        function MM_jumpMenu(targ,selObj,restore){ //v3.0
+            eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+            if (restore) selObj.selectedIndex=0;
+        }
+
+        function MM_findObj(n, d) { //v4.01
+            var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+                d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+            if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+            for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+            if(!x && d.getElementById) x=d.getElementById(n); return x;
+        }
+
+        function MM_jumpMenuGo(selName,targ,restore){ //v3.0
+            var selObj = MM_findObj(selName); if (selObj) MM_jumpMenu(targ,selObj,restore);
+        }
+        //-->
+    </script>
+</head>
+
+<body>
+<h1>11.7 CSS3其他新特性</h1>
+
+<p>CS3中还增加了一些其他的效果， 如通过gradient实现渐变背景、通过reetei实现倒影等。</p>
+
+<p class="STYLE1">11.7.1渐变背景</p>
+
+<p>CSS3可以通过gradient 属性实现如元素背景、元素边框的颜色渐变效果，极大地提高了开发效率，但是当前只有基于Webkit 和Gecko引擎的浏览器支持CSS渐变，而且不同引擎实现渐变的语法也不同。</p>
+<p>本节主要针对Webkit 引擎进行讲解。Webkit 引擎支持的渐变语法如下:</p>
+<code>
+    <p>-webkit-gradient( &lt;type&gt; ,point>[,&lt;radius&gt;]?,&lt;point&gt;[,&lt;radius&gt;]?[,&lt;step&gt;]);</p>
+</code>
+<p>其参数说明如下:</p>
+
+<p>✧type: 定义渐变类型，包括线性渐变(liner)和径向渐变(radial)。</p>
+
+<p>✧point: 定义渐变起始点和结束点坐标。该参数支持数值、百分百和关键字。关键字包括top、bottom、 left、 right。</p>
+
+<p>✧radius: 用来设置径向渐变的长度。</p>
+
+<p>✧step:定义渐变色和步长。它包括三个类型值:开始的颜色，使用from(colorvalue)函数定义;结束的颜色，使用to(colorvalue)函数定 义;颜色步长，使用colorstop(value,color value)函数定义。</p>
+
+<p class="STYLE1">11.7.2设计倒影</p>
+
+<p>CSS3新增了CSS Reflections 模块，可设计并实现倒影效果。这种效果在以前只能通过专业软件进行设计，CSS Reflections 简化了这种操作，允许用户只使用样式就可以实现倒影效果。</p>
+
+<p>Webkit引擎定义了-webkit-box-reflect 属性，该属性能够实现倒影效果，其基本语法如下:</p>
+
+<p>-webkit-box-reflect:&lt; direction&gt;&lt;offset&gt;&lt;mask-box-image&gt;;</p>
+
+<p>各参数说明如下:</p>
+
+<p>✧direction: 定义反射方向，取值包括above、 below、 left和right.</p>
+
+<p>✧offset: 定义反射偏移的距离。如果省略该参数值，则默认值为0。</p>
+
+<p>✧mask-box-image: 定义遮罩图像，该图像将覆盖倒影区域。如果省略该参数值，则默认值为无遮罩效果。</p>
+<p>设计倒影演示案例：</p>
+<a href="/example?id=11/11-7案例" target="_blank">前往设计倒影演示案例</a>
+
+<p><textarea><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>设计</title>
+<title>倒影演示案例</title>
+<style type="text/css">
+   body{background:url(示例图片/img11.webp);}
+   img{
+       width:800px;
+       height:300px;
+       border:1px solid#9CC;
+       /*定义倒影*/
+       -webkit-box-reflect:below 5px
+       -webkit-gradient(linear,left top,left bottom,
+               from(transparent),color-stop(0.2,transparent),to(white));
+   }
+</style>
+</head>
+
+<body>
+    <div align="center">
+    <img src="示例图片/img10.jpg" width="749"/>
+</body>
+</html>
+</textarea></p>
+</body>
+</html>

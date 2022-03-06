@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>6.1Web上的音频</h1>
+<p>6.1.1 音频格式</p>
+<p>HTML5支持的音频格式：Ogg，MP3，WAV</p>
+
+<p>6.1.2 audio元素的属性、方法和事件</p>
+<p>audio元素的属性</p>
+<table width="394" border="1">
+    <tr>
+        <td width="64">属性</td>
+        <td width="64">值</td>
+        <td width="244">描述</td>
+    </tr>
+    <tr>
+        <td>autoplay</td>
+        <td>autoplay</td>
+        <td>音频在就绪后马上播放</td>
+    </tr>
+    <tr>
+        <td>controls</td>
+        <td>controls</td>
+        <td>向用户显示控件，比如播放按钮</td>
+    </tr>
+    <tr>
+        <td>loop</td>
+        <td>loop</td>
+        <td>音乐播放结束后重新播放</td>
+    </tr>
+    <tr>
+        <td>preload</td>
+        <td>preload</td>
+        <td>音频在页面加载并预备播放。如果使用“autoplay“，则忽略该属性</td>
+    </tr>
+    <tr>
+        <td>src</td>
+        <td>url</td>
+        <td>要播放的音频url</td>
+    </tr>
+</table>
+
+<p>audio元素的方法</p>
+<table width="341" border="1">
+    <tr>
+        <td width="112">方法</td>
+        <td width="213">描述</td>
+    </tr>
+    <tr>
+        <td>addTextTrack()</td>
+        <td>向音频添加新的文本轨道</td>
+    </tr>
+    <tr>
+        <td>canPlaType()</td>
+        <td>检测浏览器是否能播放指定的音频类型</td>
+    </tr>
+    <tr>
+        <td>load()</td>
+        <td>重新加载音频元素</td>
+    </tr>
+    <tr>
+        <td>play()</td>
+        <td>开始播放音频</td>
+    </tr>
+    <tr>
+        <td>pause();</td>
+        <td>暂停当前播放的音频</td>
+    </tr>
+</table>
+
+<p>audio元素的常用事件</p>
+<table width="370" border="1">
+    <tr>
+        <td width="104">事件</td>
+        <td width="250">描述</td>
+    </tr>
+    <tr>
+        <td>canplay</td>
+        <td>当浏览器可以播放音频时</td>
+    </tr>
+    <tr>
+        <td>pause</td>
+        <td>当音频已暂停时</td>
+    </tr>
+    <tr>
+        <td>play</td>
+        <td>当音频已开始或不再暂停时</td>
+    </tr>
+    <tr>
+        <td>playing</td>
+        <td>当音频在因缓冲而暂停或停止后已就绪时</td>
+    </tr>
+    <tr>
+        <td>progress</td>
+        <td>当浏览器正在下载音频时</td>
+    </tr>
+    <tr>
+        <td>volumechange;</td>
+        <td>当音量已更改时</td>
+    </tr>
+    <tr>
+        <td>timeupdate</td>
+        <td>当目前的播放位置已更改时</td>
+    </tr>
+</table>
+
+
+</body>
+</html>

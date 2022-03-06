@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{ background:url(static/images/document/2/1.jpg); background-repeat:no-repeat; background-size:100%,100%;}
+        article{ padding:35px; color:#09C;}
+        header{ text-align:center;}
+        .time{ text-align:center;}
+        input{ border:none; color:white; background-color:#09c;}
+        #text{ font-family: "仿宋"; font-size:18px; font-weight:900; text-indent:2em; line-height:1.6em;}
+        footer{text-align:right;}
+    </style>
+</head>
+<body>
+<article>
+    <header>
+        <h1>
+            梁启超《少年中国说》小摘记
+        </h1>
+    </header>
+    <section class="time">
+        <time datetime="2021-9-17">
+            发布时间2021年9月17日
+        </time>
+        字号、字体、字色切换：
+        <span>
+         <input type="button" value="大" onclick="changesize(27)" />
+       </span>
+        <span>
+         <input type="button" value="中" onclick="changesize(20)"/>
+       </span>
+        <span>
+         <input type="button" value="小" onclick="changesize(16)"/>
+       </span>
+        <span>
+         <input type="button" value="隶书" onclick="changeA()"/>
+       </span>
+        <span>
+         <input type="button" value="华文新魏" onclick="changeB()"/>
+       </span>
+        <span>
+         <input type="button" value="方正姚体" onclick="changeC()" />
+       </span>
+        <span>
+         <input type="button" value="红色" id="color" onclick="changecolor()" />
+       </span>
+    </section>
+    <section id="text">
+        <p>故今日之责任，不在他人，而全在我少年。少年智则国智，少年富则国富；少年强则国强，少年独立则国独立；少年自由则国自由；少年进步则国进步；少年胜于欧洲则国胜洲;少年雄于地球，则国雄于地球。
+        </p>
+        <p>红日初升，其道大光。河出伏流，一泻汪洋。潜龙腾渊，鳞爪飞扬。乳虎啸谷，百兽震惶。鹰隼试翼，风尘翕张。奇花初胎，矞矞皇皇。干将发硎，有作其芒。天戴其苍，地履其黄。纵有千古，横有八荒。前途似海，来日方长。
+        </p>
+        <p>美哉我少年中国，与天不老！壮哉我中国少年，与国无疆！
+        </p>
+    </section>
+    <footer>
+    </footer>
+    <script>
+        function changesize(size)
+        {
+            document.getElementById("text").style.fontSize=size+"px";
+        }
+        function changeA()
+        {document.getElementById("text").style.fontFamily="隶书"};
+        function changeB()
+        {document.getElementById("text").style.fontFamily="华文新魏"};
+        function changeC()
+        {document.getElementById("text").style.fontFamily="方正姚体"};
+        i=1;
+        function changecolor() {i++;
+            switch(i%3){
+                case 0:
+                    document.getElementById("text").style.color="red";
+                    document.getElementById("color").value="蓝色";
+                    break;
+                case 1:
+                    document.getElementById("text").style.color="#09c";
+                    document.getElementById("color").value="绿色";
+                    break;
+                case 2:
+                    document.getElementById("text").style.color="green";
+                    document.getElementById("color").value="红色";
+                    break;
+            }
+        };
+    </script>
+</article>
+</body>
+</html>

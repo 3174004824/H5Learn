@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>11.5 用户界面</h1>
+
+<p>CSS3新增加了UI模块用来控制与用户界面相关的呈现方式，该模块定义了很多用于提高用户体验的属性和功能。</p>
+<p class="STYLE1">11.5.1改变盒模型模式</p>
+<p>
+    CSS3之前，符合标准的浏览器中元素的width或height属性只包括content部分，而IE5浏览器中元素的width和height 属性则包括border+padding+content三部分，这导致了冲突。CSS3利用盒模型进行了完善，通过设置box-sizing属性，可以设置不同的盒模型模式。其基本语法格式如下:</p>
+
+<p>box-sizing:content-box | border-box | inherit;</p>
+
+<p>其参数解释如下:</p>
+
+<p>✧content-box: 元素的属性width/height代表content 的宽和高。</p>
+
+<p>✧border-box: 元素的属性width/heigh代表bordert padding+content的宽和高。✧inherit: 继承父元素box-sizing 属性的值。</p>
+
+<p class="STYLE1">11.5.2调节元素尺寸</p>
+
+<p>CSS3中新增了resize 属性，支持通过拖动的方式改变元素的大小。在此之前，如果要实现这种效果，通常需要使用JavaScript脚本。使用resize 属性的基本语法如下:</p>
+
+<p>resize:none|both|horizontal|vertical|inherit;</p>
+
+<p>参数说明如下:</p>
+
+<p>✧none: 不支持尺寸调整。</p>
+
+<p>✧both:用户可调整元素的宽度和高度。</p>
+
+<p>✧horizontal: 用户可调整元素的宽度。</p>
+
+<p>✧vertical: 用户可调整元素的高度。</p>
+
+<p>✧inherit:默认继承。</p>
+
+<p class="STYLE1">11.5.3 控制显示内容</p>
+
+<p>在CSS3中利用content 属性可以替换文本内容和文本属性，而在此之前，一般 采用JavaScript脚本来实现这种任务。使用content的基本语法如下:
+</p>
+<p>content:normal|string|attr()|uri()|counter()|none;</p>
+
+<p>参数说明如下:</p>
+
+<p>✧normal: 默认值。</p>
+
+<p>✧string: 插入文本。</p>
+
+<p>✧attr(): 插入属性。</p>
+
+<p>✧url(): 插入一个外部资源，如图像、音视频等。</p>
+
+<p>✧counter(): 计数器，用于插入排序标识。</p>
+
+<p>✧none: 无内容。</p>
+
+<p class="STYLE1">11.5.4 恢复默认样式</p>
+
+<p>在CSS3中，可以利用initial 属性值取消对元素的样式设定。要取消元素已定义的样式最简单的方法是直接在样式表中删除该样式。但是在有些情况下，一个样式可能对应多个元素，如果把该样式删除会导致其他元素样式显示不正常，因此可以使用initial 属性针对单个元素恢复默认样式。</p>
+
+</body>
+</html>

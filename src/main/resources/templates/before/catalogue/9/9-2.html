@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>9.2使用web works</h1>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Web Workers初始化时会接收一个JavaScript文件的URL地址，URL可以是相对或者绝对路径，只要是同源即可。同源策略是由 Netscape提出的一个著名的安全策略，同源是指域名、协议、端口相同。Web Workers一旦生成，就可以使用postMessage API进行传送和接收数据。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;其处理流程如下:首先主页建立监听器并发送消息给 Web Workers，Web Workers接收到消息后进行处理并发送消息给主页监听器，主页监听器接收到消息进行处理。这个过程可以反复进行。</p>
+</p>
+<h2>9.2.1建立主页worker和监听器</h2>
+<p>为实现页面到Web Workers 的通信，可以调用 postMessage函数以传入所需数据:同时将建立一个监听器，用来监听由Web Workers 发送到页面上的消息和错误信息。</p>
+<h2>9.2.2添加worker中的监听器和javascript脚本</h2>
+<p>在 Web Workers 的JavaScript 脚本中，需要添加消息监听器，并在事件处理之后和主页进行通信。</p>
+<a href="/example?id=9/9-2-1" target="_blank">建立主页worker和监听器</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>login UI</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body>
+<div class="box">
+    <h2>H5网站管理系统</h2>
+    <form th:action="@{/After/MyRoot}" method="post">
+        <div class="inputBox">
+            <input type="text" name="username">
+            <label>用户名</label>
+        </div>
+        <div class="inputBox">
+            <input type="password" name="password">
+            <label>密码</label>
+        </div>
+        <input type="submit" value="登录">
+    </form>
+</div>
+</body>
+</html>

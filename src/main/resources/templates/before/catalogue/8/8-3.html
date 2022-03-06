@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>浏览器支持情况</h1>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;应用程序缓存实现的关键部分是需要缓存清单文件，有些浏览器提供了查看应用程序缓存的方法。例如，在最新版本的 FireFox 中，提供了查看缓存中每个文件的方法，在地址栏中输入about:cache，页面会显示应用程序的缓存信息。目前的浏览器大部分已经支持HTML5的应用程序缓存，因为浏览器的支持情况不同，所以使用之前应该先测试浏览器的支持情况，检测方法如下:</p>
+<p>if( window.applicationCache)</p>
+<p>{//浏览器支持的离线应用}</p>
+<p>else{//浏览器不支持的离线应用}</p>
+<p>各浏览器的支持情况如表8-1所示</p>
+<table border="1">
+    <tr>
+        <td>浏览器</td>
+        <td>说明</td>
+    </tr>
+    <tr>
+        <td>IE</td>
+        <td>不支持</td>
+    </tr>
+    <tr>
+        <td>firebox</td>
+        <td>3.5以及以上支持</td>
+    </tr>
+    <tr>
+        <td>Opera</td>
+        <td>10.6以及以上支持</td>
+    </tr>
+    <tr>
+        <td>chrome</td>
+        <td>4.0以及以上支持</td>
+    </tr>
+    <tr>
+        <td>safari</td>
+        <td>4.0以及以上支持</td>
+    </tr>
+    <tr>
+        <td>iphone</td>
+        <td>2.0以及以上支持</td>
+    </tr>
+    <tr>
+        <td>Android</td>
+        <td>2.0以及以上支持</td>
+    </tr>
+</table>
+
+</body>
+</html>

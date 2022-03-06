@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="视频列表">
+    <link th:href="@{../../static/css/before/bootstrap.min.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css}">
+    <link th:href="@{../../static/css/before/style.css}" rel="stylesheet">
+    <title>视频列表</title>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        table td,
+        table th {
+            border: 1px solid #cad9ea;
+            color: #666;
+            height: 30px;
+        }
+
+        table thead th {
+            background-color: #CCE8EB;
+            width: 100px;
+        }
+
+        table tr:nth-child(odd) {
+            background: #fff;
+        }
+
+        table tr:nth-child(even) {
+            background: #F5FAFA;
+        }
+    </style>
+</head>
+<body
+        topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0">
+
+<div th:replace="before/include/include :: header"></div>
+
+<div>
+    <form method="post" name="reg">
+        <table width="90%" class="table">
+            <caption>
+                <h2 align="center">文件列表</h2>
+            </caption>
+            <thead>
+            <tr>
+                <th>
+                    视频名
+                </th>
+                <th>
+                    简介
+                </th>
+                <th>
+                    播放
+                </th>
+            </tr>
+            </thead>
+            <tr th:each="page:${pages.getRow()}">
+                <td th:text="${page.getTitle()}"></td>
+                <td th:text="${page.getIntroduce()}"></td>
+                <td><a th:href="@{/videoplay(id=${page.getId()})}" target="_blank">播放</a></td>
+            </tr>
+        </table>
+    </form>
+
+    <div align="center">
+
+    <div style="text-align: center;font-size: 15px;display: inline">
+        <a href="/showAllCustomer?page=1">首页</a>
+
+        <div th:if="${pages.getCurrentPage() > 1}" style="display: inline">
+            <a th:href="@{/showAllCustomer(page=${pages.getCurrentPage()-1})}">上一页</a>
+        </div>
+        <div th:if="${pages.getCurrentPage() <= 1}"style="display: inline">
+            上一页
+        </div>
+
+        <div th:each="page:${pages.getPages()}" style="display: inline">
+            <div th:if="${pages.getCurrentPage()} == page" style="display: inline">
+                <a th:href="@{/showAllCustomer(page=${page})}" th:text="${page}" style="text-decoration: underline"></a>
+            </div>
+            <div th:if="${pages.getCurrentPage()} != page" style="display: inline">
+                <a th:href="@{/showAllCustomer(page=${page})}" th:text="${page}"></a>
+            </div>
+        </div>
+
+        <div th:if="${pages.getCurrentPage()} < ${pages.getPages()}" style="display: inline">
+            <a th:href="@{/showAllCustomer(page=${pages.getCurrentPage() + 1})}" style="display: inline">下一页</a>
+        </div>
+
+        <div th:if="${pages.getCurrentPage()} >= ${pages.getPages()}" style="display: inline">
+            下一页
+        </div>
+        <a th:href="@{/showAllCustomer(page=${pages.getPages()})}">末页</a>
+    </div>
+</div>
+</div>
+</body>
+</html>

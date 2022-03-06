@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<metahttp-equiv="Content-Type"content="text/html;charset=UTF-8">
+<title>拖曳本地图片到页面指定元素内</title>
+<script type="text/javascript">
+        function dragover(e){
+                e.stopPropagation();
+                e.preventDefault();   };
+        function dragDrop(e){
+                e.stopPropagation();
+                e.preventDefault();
+                var fileList=e.dataTransfer.files;
+                var fileType=fileList[0].type;
+                var olmg=document.createElement('img');
+                var reader=new FileReader();
+                var oDropBox=document.getElementById('dropBox');
+                if(fileType.indexOf('image')==-1){
+                        alert('必须是图形文件!');
+                        return; }
+                reader.onload=function(e){
+                       oImg.src=this.result;
+                       oDropBox.innerHTML=";
+                       oDropBox.appendChild(oImg);
+			    };
+                reader.readAsDataURL(fileList[0])
+		};
+</script>
+<style type="text/css">
+#dropBox{
+	width:400px;
+    height:300px;
+    border:lpx solid#015EAC;
+    color:#666;
+	overflow:hidden; }
+</style>
+</head>
+<body>
+      <div id="dropBox"ondrop="dragDrop(event)"
+      ondragover="dragover(event)">拖曳图片到这里!</div>
+</body>
+</html>

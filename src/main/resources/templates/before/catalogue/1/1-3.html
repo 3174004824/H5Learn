@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<p>
+<h1>1.3	　HTML5元素和文档格式</h1><br>
+　　尽管与HTML早期版本相比，HTML5在语法上有了很大的变化，但是这些变化与其他开发语言的语法变化在根本意义上有所不同，因为在 HTML5之前几乎没有符合标准规范的Web浏览器。   <br>
+<p>   　　HTML 的语法是在SGML语言的基础上建立起来的。但是SGML语法非常复杂，要开发能够解析SGML语法的程序也不是很容易的事情，所以很多浏览器都不包括SGML的分析器。因此，虽然HTML基本上遵从SGML语法，但是对于HTML 的执行，在各浏览器之间并没有一个统一的标准。<br>
+<p>
+    　　HTMLSGML的语法是在语言的基础上建立起来的.但是sgml语法非常复杂，要开发能够解析sgml语法的程序也不是很容易的事情，所以很多浏览器都不包括sgml的分析器.因此，虽然HTML基本上遵从sgml语法，但是对于HTML的执行，在各浏览器之间并没有一个统一的标准。
+<p>　　提高Web浏览器之间的兼容性是HTML5的一个重要目标。为了确保兼容性，就要有一个统一的标准，因此，HTML5围绕这个标准，重新定义了一套在现有HTML 基础上修改而来的语法，使各浏览器都能够符合这个通用的标准。
+<p>
+<h3>1.3.1　	HTML5语法规范</h3>
+<h4>1.　HTML5中的标记方法</h4>
+<p>（1）	内容类型(ContentType)。　与之前版本的HTML相比，HTML5的文件扩展名和内容类型都保持不变。扩展名依然为“.html”或“.htm”,内容类型仍然为“text/html”。
+<p>（2）	DOCTYPE声明。　DOCTYPE声明HTML文件中必不可少的，它位于文件的第一行。在HTML5中DOCTYPE声明方式是不区分大小写的，引号也不区分是单引号还是双引号。
+<p>（3）	指定字符编码。在HTML5中，可以直接使用meta元素的charset属性来指定字符编码，代码如下：“　meta charset="utf-8"　”
+<h4>2.	　HTML5与之前HTML版本的兼容性</h4>
+　　HTML5语法为了保证与之前版本的HTML语法达到最大程度的兼容，明确地规定了一些兼容性情况的处理方式。例如，没有结束标记的p标签在之前版本的HTML代码中随处可见，在HTML5中并没有把这种情况作为错误来处理，而是允许存在这种情况。
+　　<p>　那么针对上面的情况，在HTML5中是如何确保元素可以与之前版本的HTML达到兼容的呢？
+<p>（1）	元素标记的变化
+<p>　　为了解决元素兼容的问题，HTML5将元素的编辑分为三种类型, 如图所示：<p><img src="../../../../static/images/document/1/4.png" width="587" height="288" />
+<p>（2）	元素属性的变化
+<p>　　对于具有 boolean值的属性，例如 disabled和readonly等，当只写属性名而不指定属性值时，则默认缺省值为true;如果想要将属性值设为false，可以不使用该属性。另外，如果想将属性值设置为true，也可以将属性值设定为属性名，或设定为空字符串。
+<p>（3）元素引号的变化
+<p>　　通常情况下，指定属性值时，属性值两边既可以使用双引号，也可以使用单引号。HTML5在此基础上做了一些改进，当属性值不包括空字符串、“
+    <”、“>”、“=”、单引号、双引号等字符时,属性两边的引号可以省略。
+<h3>1.3.2	　HTML5新元素</h3>
+　　HTML5中增加了一些新的标签元素，新增的元素包括结构元素、媒体元素、列表元素、表单域元素等，另外HTML5也废除了一些元素。新增的结构元素如下图所示：
+
+<p><img src="../../../../static/images/document/1/5.png" width="587" height="552" /> <img src="../../../../static/images/document/1/6.png" width="587" height="552" />
+<h3>1.3.3	　HTML5文档结构</h3>
+
+<p><img src="../../../../static/images/document/1/7.png" width="587" height="288" />
+</body>
+</html>

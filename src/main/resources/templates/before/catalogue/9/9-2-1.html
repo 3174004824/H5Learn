@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style type="text/css">
+		h1{color: #3e8f3e;text-decoration: underline}
+		h2{color: #3e8f3e;text-decoration: underline}
+		h3{color: #4cae4c;text-decoration: underline}
+		h4{color: #5FB878;text-decoration: underline}
+	</style>
+</head>
+<body>
+<h2>建立主页worker和监听器</h2>
+<p>
+	//1.建立worker
+</p><p>
+	worker=new worker(./js/echo Worker.js);
+	</p><p>
+	//2.传递消息，postMEssage
+	</p><p>
+	console.log("页面发送消息")
+	</p><p>
+	worker.postMessage("1");
+	</p><p>
+	3.建立监听器和处理函数
+	</p><p>
+	worker.addEventListener("message",messageHandler,true);
+	</p><p>
+	function messageHandler(e) {
+		</p><p>
+		console.log("页面处理worker发来的消息");
+		</p><p>
+		console.log(e.data);
+		</p><p>
+	}
+</p>
+<h2>添加worker中的监听器和javascript脚本</h2>
+<p>
+	onmessage=function(oEvent){
+		console.log("javascript脚本接收到消息");
+		posTMessage(new date());
+	}
+	addEventListener("message",messageHandler,true);
+</p>
+</body>

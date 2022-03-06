@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>7.1Web存储</h1>
+<p>7.1.1什么是Web存储</p>
+<p>web存储指的是在web通信过程中，由客户端（如浏览器）对少量数据进行的本地存储</p>
+
+<P>7.1.2Cookie和Web存储的优缺点</P>
+<p>WebStorage和Cookie有相似之处，也有一些不同的地方。<p>
+<p>网络传输：Cookie会随着请求发送到服务器端，而WebStorage数据存储在客户端，不会与服务器发生交互；</p>
+<p>存储限制：Cookie存储的数据大小限制为4KB，而WebStorage能够提供更大容量的存储设计(根据浏览器不同，可以存储5MB左右的数据)；</P>
+<p>数据接口：WebStorage提供丰富的数据接口，开发人员可以方便地访问数据，而Cookie则需要开发人员自行开发接口；</p>
+<P>存储空间：WebStorage每个域(包括子域)有独立的存储空间，各个存储空间是完全独立的，因此不会造成数据混乱。</p>
+
+<P>7.1.3Web存储API</P>
+<table width="749" border="1">
+    <tr>
+        <td width="144">函数名</td>
+        <td width="589">功能</td>
+    </tr>
+    <tr>
+        <td>length</td>
+        <td>存储的键值对的数量</td>
+    </tr>
+    <tr>
+        <td>key(n)</td>
+        <td>返回存储的第n个键</td>
+    </tr>
+    <tr>
+        <td>getItem(key)</td>
+        <td>返回键key对应的值。如果值不存在，则返回空null。注意，返回的值是一个字符串。如果存储的值是整数或布尔型，需要进行类型转换</td>
+    </tr>
+    <tr>
+        <td>setItem(key,value)</td>
+        <td>把值插入到key键中</td>
+    </tr>
+    <tr>
+        <td>removeltem(key)</td>
+        <td>移除某个键对应的值（包含键本身）。如果键不存在，此 方法不做任何事情</td>
+    </tr>
+    <tr>
+        <td>clear()</td>
+        <td>清空存储的键／值数据</td>
+    </tr>
+</table>
+</body>
+</html>

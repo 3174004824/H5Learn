@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>绘制直线</title>
+    </head>
+    <body>
+        <canvas id="mycanvas" width="300" height="150" style="border:1px solid #d3d3d3"></canvas>
+        <script>
+            var c= document.getElementById("mycanvas");
+            var cxt= c.getContext("2d");
+            cxt.strokeStyle = "red";
+            cxt.moveTo(20,80);
+            cxt.lineTo(260,80);
+            cxt.stroke();
+        </script>
+    </body>
+</html>

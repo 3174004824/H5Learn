@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<p><h1>2.1　HTML5结构元素</h1>
+<p>　　HTML4中经常使用
+    div id="nav">代表一个导航区域，使用div id="footer">
+    代表一个页脚区域。而HTML5进一步加强了这方面的功能，新增了几种典型的结构元素:article、header、footer、aside、nav、section、figure。通过这些元素可以更清晰地区分Web页面的不同部分。
+    　
+<p>　　在设计网页布局时，利用新增的结构元素并结合CSS3样式，可以实现美观清晰的页面布局。
+<h3>2.1.1　文章结构  </h3>
+<p>　　在HTML5中标识一篇文章，用到三个结构元素，分别是article、header 和 footer。article元素用于标识页面中独立的、完整的内容。article 的内容可以被其他网站引用，一般用于论坛帖子、博客文章、新闻和评论中。header元素标识文章的标题。footer元素标识文章的脚注，用于显示文章的作者、版权信息、链接或者联系方式等。header元素和 footer元素不仅可以应用于文章的标题和脚注，也可以应用于整个网页或区段的标题和底部,这两个元素在同一个页面中可以多次出现。
+    　　
+<p>　下面的代码用于展示一则新问，其中，header和footer 元素都包含在 article 元素中。
+    从代码结构上看，此段代码比使用 HTML4 中的div元素更清晰，更易于理解和维护。
+    在浏览器打开该页面，效果：
+    <a href="/example?id=2/2-1-1" target="_blank">请点击</a>
+<h3>2.1.2　　内容分段 </h3>
+<p>　　section元素是一个区域分组元素，用于页面内容的分段，各个段落的内容具有相对的独立性，同时相邻的段落之间又具有相关性。section元素通常由内容和标题组成，标题一般使用标准的标题元素(h1~h6元素)，没有标题的内容不能使用section元素。  </p>
+<p>　　section、article和 div有一些类似的地方，都可以用于区分网页的不同区域，但是它们之间是有区别的。在 HTML5中，div主要用于页面的大块布局，article元素强调的是独立性，而 section主要用于内容的分段。article元素和 section元素可以相互嵌套，当一篇文章中有几个并列的段落时，就可以用section分段;当 section的其中一段具有独立性时，可以用article标识该段的独立性。在浏览器打开该页面，效果： <a href="/example?id=2/2-1-2" target="_blank">请点击</a>
+    </a></p>
+<h3>2.1.3　辅助信息  </h3></p>
+　　aside元素用于显示与页面或文章相关但又可以独立的内容，可以是广告、引用、侧边栏等。aside元素包含在 article元素中时，作为主要内容的附属信息部分，内容往往是与当前文章有关的参考资料; aside元素还可以用于页面或站点全局的附属信息部分，最典型的应用是侧边栏，例如友情链接。在浏览器打开该页面，效果： <a href="/example?id=2/2-1-3" target="_blank">请点击</a></p>
+<h3>2.1.4　导航信息</h3></p>
+　　 nav元素用于定义页面中的导航链接组，通过这些链接可以跳转到其他页面或者本页面中的其他区块。用nav元素实现站点导航是最典型的应用，对于一篇比较长的文章，也可以利用nav元素实现章节导航。
+不是所有页面上的链接都需要放在nav元素中，nav元素只用作主要的导航区块。例如，页面底部通常会有一组链接，如联系方式、版权说明等，则不需要使用nav元素，而是使用footer元素。在浏览器打开该页面，效果： <a href="/example?id=2/2-1-4" target="_blank">请点击</a>  </p>
+<h3>2.1.5　显示/隐藏内容 </h3> </p>
+　　details元素和summary元素配合使用，可以方便地实现详细信息的显示和隐藏，而在HTML4中必须用脚本才能实现该效果。下面的代码，利用details元素和 summary元素实现了书籍简介的显示和隐藏。在浏览器打开该页面，效果： <a href="/example?id=2/2-1-5" target="_blank">请点击</a> </p>
+<h3>2.1.6　定义对话框 </h3> </p>
+　　在 HTML4 中，实现对话框需要编写比较复杂的脚本，而在 HTML5中新增的 dialog元素可以让开发人员非常方便地创建对话框，并显示在 Web 页面中。下面的代码实现了通过对话框增加评论的功能。在浏览器打开该页面，效果： <a href="/example?id=2/2-1-6" target="_blank">请点击</a> </p>
+<h3>2.1.7　图文结构  </h3></p>
+　　figure元素用于定义独立的流内容(如图像、图表、照片、代码等)。figure元素的内容与主内容相关，但如果被删除，则不应对网页上的其他内容产生影响。figcaption元素用于定义figure的标题，可以放置在figure元素的开头或者结尾,但是一个figure元素内只允许放置一个 figcaption元素。  在浏览器打开该页面，效果： <a href="/example?id=2/2-1-7" target="_blank">请点击</a></p>
+<br>
+<br>
+<a href="/example?id=2/2-1-1-1" target="_blank">案例1</a>
+</body>
+</html>

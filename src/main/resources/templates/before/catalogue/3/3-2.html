@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>3.2新的表单域</h1>
+
+<p><p>HTML5支持的表单域包括文本框< text>、密码框 < password >、单选按钮< radio>、复选框< checkbox >、文件选择框< file >、图像< image >、隐藏文本框< hidden >、普通按钮< button>、重置按钮< reset>和提交按钮< submit>。<br /></p>
+下面的代码是表单域应用示例:<br />
+<div class="one"><p> 文本框:</p>
+
+    < input type="text"name= "textname" id="textid"/> < br> < br><br />
+    <p>密码框:</p>
+
+    < input type= "password" name="pwname" id="pwid"/> < br> < br><br />
+    <p>单选按钮:</p>
+    < input type="radio" name= "radiom" id="radiom"/>男
+    < input type-"radio"name="radiof" id="radiof" >女< br> < br><br />
+    <p> 复选框:</p>
+    < input type="checkbax" name="ckhtml" id= "ckhtml"> HTML5<br />
+    < input type="checkbax" name="bkcss" id="ckess"> CSS3< br>< br>   <br />
+
+    <p>文件选择框：</p>
+    < input type="file" name= "filename id= "iled">< b> < br><br />
+
+    < input type="utto"  name="bonsimple'="bonsimple"  value="普通按钮"><br />
+
+    < input type="reset" name="brreser" id="btnreset" value="重置按钮"><br />
+
+    < input type="submit" name="btnsubmit" id="btnsubmit" value="提交按钮"><br /></div><br />
+
+<a href="/example?id=3/3-2-0" target="_blank">点击查看实例</a>
+<p>在HTML5 中增加了许多新的表单域，可以开发出交互性更好的页面，这些新的表单域包括颜色< color>、日期< date>、日期和时间< datetime>、月份< month>.星期< week>、时间< time>、电子邮箱< email>、超链接< url>、数字< number>、范围< range>、查询< search>。</p></p>
+
+
+<h2>3.2.1 color 类型</h2>
+
+<p>color类型的表单域用于选择颜色。该表单域语法格式如下:</p>
+<div>
+    < form><br />
+
+    请选择一个你喜欢的颜色: <br />
+    < imput type="color"  name=" txtcolor">< br><br />
+
+    < input type="submit"><br />
+
+    < form><br />
+    <br /></div>
+<br />
+
+
+<a href="/example?id=3/3-2-1" target="_blank">点击查看 实例</a>
+<h2> 3.2.2 date 类型 </h2>
+
+<p>date类型的表单域用于选择日期。其语法格式如下:<br /></p>
+
+<div>< form><br />
+
+    日期:<br />
+    < input type="date" name="txtdate"><br />
+
+    < input type="submit" value="提交"><br />
+
+    < /form><br /></div>
+<br />
+
+<a href="/example?id=3/3-2-2" target="_blank">点击查看实例</a>
+
+<h2>3.2.3 datetime 类型 和datetime-local类型</h2>
+
+<p>datetime类型和datetime-local类型表单域用于选择年、月、日和时间，其中datetime用于选择UTC时间，datetime-local用于选择本地时间。目前datetime类型的表单域只有Safari和Opera两种浏览器支持。datetime-local类型表单域的语法格式如下:<br /></p>
+
+
+<div>< form><br />
+
+    日期时间: <br />
+
+    < input type= "datetime-local" name="txtdatetime"><br />
+
+    < input type= "submit" value="提交"><br />
+
+    < /form><br /></div>
+<br />
+
+<a href="/example?id=3/3-2-3" target="_blank">点击查看实例</a>
+<h2>3.2.4 month 类型</h2>
+
+<p>month类型的表单域用于选择月份，其语法格式如下:<br /></p>
+
+
+<div>< form><br />
+
+    月份: <br />
+
+    < input type="month" name="txtmonth"><br />
+
+    < input type="submit" value="提交"><br />
+
+    < /form><br /></div><br />
+
+
+<a href="/example?id=3/3-2-4" target="_blank">点击查看实例</a>
+<h2>3.2.5 week 类型 </h2>
+<p>week类型的表单域用于选择当年的第几周，其语法格式如下：<br /></p>
+
+<div>< form><br />
+    周: <br />
+
+    < input type="week" name="ctweek"><br />
+
+    < input type-"submit" value="提交"><br />
+
+    < /form><br /></div><br />
+
+
+<a href="/example?id=3/3-2-5" target="_blank">点击查看实例</a>
+
+<h2>3.2.6 time 类型</h2>
+
+<p>time类型的表单域用于选择时间。其语法格式如下:<br /></p>
+
+
+<div>< form><br />
+
+    时间:<br />
+
+    < input type="time" name="txttime"><br />
+
+    < input type="submit" value="提交"><br />
+
+    < /form><br /></div><br />
+
+<a href="/example?id=3/3-2-6" target="_blank">点击查看实例</a>
+
+<h2>3.2.7 email 类型</h2>
+
+<p>email类型的表单域用于输入E-mail地址。在提交表单时，会自动验证email域的值是否正确，并提示相应的信息。其语法格式如下:<br /></p>
+
+
+<div>< form><br />
+
+    电子邮件:<br />
+     
+    < input type= "email" name="txtemail"><br />
+
+    < input type= "submit" value="提交"><br />
+
+    < /form></div><br />
+
+<a href="/example?id=3/3-2-7" target="_blank">点击查看实例</a>
+<h2>3.2.8 url 类型</h2>
+
+<p>url类型的表单域用于输入URL地址信息。在提交表单时，会自动验证url域的值是否正确，并提示相应的信息。其语法格式如下:<br /></p>
+
+
+<div>< form><br />
+
+    URL: <br />
+
+    < input type="url" name="txtURL"><br />
+
+    < input type="submit" value="提交"><br />
+
+    < /form><br /></div>
+<br />
+
+<a href="/example?id=3/3-2-8" target="_blank">点击查看实例</a>
+<h2>3.2.9 number类型</h2>
+
+<p>number类型的表单域用于输入包含数值的信息。在代码里可以设定输入数值的范国、初始值和步进单位。其语法格式如下:<br /></p>
+
+<div>< form><br />
+
+    数字：<br />
+
+    < inputtype="mumber"name="txtmumber"min="1"max="10"step="2"valuc="3"><br />
+
+    < input type="submit" value="提交><br />
+
+    < /form></div><br />
+
+<a href="/example?id=3/3-2-9" target="_blank">点击查看实例</a>
+<h2>3.2.10 range 类型</h2>
+
+<p>range类型的表单域用于输入一个在一定范围内的数字，显示为一个滑动控件。range类型的输入结果与number类型一致，不同的是range类型的表单域显示为滑动条，而number类型的表单域显示为输入框。range类型的表单域语法格式如下:<br /></p>
+<div>< form><br />
+    < inputtype="range" name="txtrange" min="0" max="10" value="5">10<br />
+
+    < input type="submit" value="提交"><br />
+
+    < /form></div><br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> 表3-2 range 表单域属性</strong>
+<table width="581" border="0" >
+    <tr>
+        <td width="67">属性</td>
+        <td width="75">值</td>
+        <td width="397">描述</td>
+    </tr>
+    <tr>
+        <td>max</td>
+        <td>number</td>
+        <td>允许输入的在最大值</td>
+    </tr>
+    <tr>
+        <td>min</td>
+        <td>number</td>
+        <td>允许输入的最小值</td>
+    </tr>
+    <tr>
+        <td>step</td>
+        <td>number</td>
+        <td>规定的步进单位（如果 step =“2”，则合法的数是0，2，4等）</td>
+    </tr>
+    <tr>
+        <td>value</td>
+        <td>number</td>
+        <td>规定的默认值</td>
+    </tr>
+</table>
+
+<br />
+
+
+<a href="/example?id=3/3-2-10" target="_blank">点击查看实例</a>
+
+<h2>3.2.11 search 类型</h2>
+
+search类型的表单域用于搜索匹配的信息，显示为常规的文本域，比如站点搜索或Google搜索。其语法格式如下:<br />
+
+<div>< form><br />
+
+    查询:<br />
+
+    < input type="search"=name="tsearch"><br />
+
+    < input type="submit" value="提交"><br />
+
+    < /form><br />
+</div><br />
+
+<a href="/example?id=3/3-2-11" target="_blank">点击查看实例</a>
+
+</body>
+</html>

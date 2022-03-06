@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+
+<body>
+<h1>5.1拖放实现方式</h1>
+<p>为了使元素可拖动，首先将draggable属性设置为true，然后在被拖动元素和目标元素上添加事件，这些事件的触发事件和目标对象各不相同，具体如下：</p>
+<p>①dragStart：在开始拖放动作时发生，该事件的对象是被拖动元素；</p>
+<p>②drag：在拖动过程中执行，该事件的对象是被拖动元素；</p>
+<p>③dragEnter：当拖动界面元素进入目标元素时发生，该事件的对象是目标元素；</p>
+<p>④dragOver：当拖动界面元素在目标元素上移动时发生，该事件的对象是目标元素；</p>
+<p>⑤dragLeave：当拖动界面元素离开目标元素时发生，该事件的对象是目标元素；</p>
+<p>⑥drop：当界面元素放置在目标元素上时发生，该事件的对象是目标元素；</p>
+<p>⑦dragEnd：当完成拖放事件后发生，即在drop事件之后触发，该事件的对象是被拖动元素。</p>
+
+
+</body>
+</html>

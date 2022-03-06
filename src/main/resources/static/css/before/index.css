@@ -1,0 +1,87 @@
+html,body{
+	width: 100%;
+	height: 100%;
+}
+header{
+	width:100%;
+	height: 50px;
+	background-color: #0593d3;
+	position: fixed;
+}
+header span{
+	font-size: 24px;
+	color: #fff;
+	margin-left: 50px;
+	line-height:0px;
+}
+section{
+	width: 100%;
+	height: 100%;
+}
+section nav{
+	width: 350px;
+	height: 100%;
+	float: left;
+	/*position: fixed;*/
+	margin-top: 0px;
+	overflow: hidden;
+}
+section nav #left{
+	width: calc(100% + 15px);
+	height: 100%;
+	margin: 30px 0px 30px 50px;
+	overflow-y: scroll;
+}
+section nav #left #left-wrap{
+	width: 100%;
+}
+section nav .left-list .clicktitle{
+	display: inline-block;
+	width: 290px;
+	height: 40px;
+	font-size: 16px;
+	line-height: 40px;
+	color: #444;
+	padding-left: 10px;
+}
+section nav .left-list .clicktitle:hover{
+	background-color: #f7f7f7;
+}
+section nav .left-list .left-list-content{
+	margin-left: 35px;
+}
+section nav .left-list .left-list-content li a{
+	display: inline-block;
+	width: 100%;
+	padding:10px 0 10px 10px;
+}
+section nav .left-list .left-list-content li:hover{
+	background-color: #f6f6f6;
+}
+section nav .left-list .left-list-content .left-list-content-a{
+	color: #444;
+}
+.active{
+	background-color: rgb(0,168,230) !important;
+	color: #fff !important;
+}
+section nav #left ul li ul{/*这里加上a section nav #left ul li a ul 会失效 原因未知*/
+	display: none;
+}
+section #shuxian{
+	float: left;
+	width: 1px;
+	height: 1500px;
+	background-color: #ccc;
+	margin-left: 350px;
+	margin-top: 80px;
+	position: fixed;
+}
+
+section article{
+	width:calc(100% - 351px);
+	height: 100%;
+	float: left;
+	margin-top: 0px;
+	overflow: auto;
+}

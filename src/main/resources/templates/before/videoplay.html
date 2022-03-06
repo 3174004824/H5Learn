@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>视频</title>
+    <link th:href="@{../../static/css/before/bootstrap.min.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css}">
+    <link th:href="@{../../static/css/before/style.css}" rel="stylesheet">
+    <style>
+        .all{
+            width: 100%;
+            height: 100%;
+            background: #31b0d5;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<!--<div th:replace="before/include/include :: header"></div>-->
+
+<div class="all" align="center">
+    <video id="my-video" controls>
+        <source th:src="@{/getVideo(videoId = ${id})}" type='video/mp4'>
+        <p class="vjs-no-js">
+            你的浏览器貌似不支持 %>_<%
+            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+    </video>
+</div>
+</body>
+</html>

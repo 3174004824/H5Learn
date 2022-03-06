@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #la{
+            width:200px;
+        }
+    </style>
+    <script>
+        function test(){
+            var kk = document.getElementById("la");
+            var cc = document.getElementById("cc");
+            kk.value=cc.value;
+        }
+    </script>
+</head>
+<body>
+
+<form oninput="test()"><!--使用表单的oninput事件使得meter的参数值随滑块值变化-->
+    <meter min="0" max="100" low="10" high="80" value="8" optimum="50" id="la"></meter>
+    <!--min max是valueq取值范围，low和high以及optimum是对value的判断，value处在不同的区间时，meter得颜色会不同-->
+    0<input id="cc" type="range" min="0" max="100" value="0">100
+</form>
+</body>
+</html>

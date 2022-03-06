@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>如何实现应用程序缓存</h1>
+<h2>8.4.1搭建离线缓存应用程序</h2>
+<p>构建一个HTML文件使之具有离线缓存功能</p>
+<p>程序的设计步骤如下:</p>
+<p>(1)编写构成界面的HTML和 CSs。(2)构建manifest清单。</p>
+<p>(3)检查浏览器支持情况。</p>
+<p>(4)检查在线状态或支持离线行为。</p>
+<h2>8.4.2更新缓存</h2>
+<p>实现应用程序缓存的 Web应用，一旦文件被缓存，即使修改了服务器上的文件，浏览器也会继续展示已缓存的版本。为了确保浏览器更新缓存，需要更新 manifest 文件。
+    如何更新html5离线缓存?下面的三种方法可以做到:</p>
+<p>清除离线存储的数据。如果只是清理浏览器历史记录，则不一定能清除数
+    据，因为不同浏览器管理离线存储的方式不同。比如 Firefox的离线存储数据要到“选项”→“高级”一“网络”→“脱机存储”里才可以清除。</p>
+<p>manifest文件被修改。修改了manifest文件里所罗列的文件也不会更新缓存，而是要替换manifest文件。</p>
+<p>使用JavaScript编写更新程序。</p>
+<p>重点学习使用JavaScript脚本控制缓存更新。ApplicationCache&nbsp;API是一个操作应用缓存的接口，其相应的对象包含一系列与缓存相关的属性及事件。其中window.applicationCache.status 代表了缓存的状态，主要有6种。</p>
+</p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h2>4.2绘制文字</h2>
+
+<p>canvas中绘制文字可以使用fillText方法和strokeText方法，这两个方法分别用于以轮廓方式绘制文字。</p>
+<p>fillText语法如下:</p>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;filltextxy[maxWidth])</div>
+<p>其中，text表示要绘制的文字，x、y表示起始坐标，[maxWidth]表示最大宽度，是可选参数。</p>
+<p>以填充方式绘制带渐变效果的文字。<br />
+    创建HTML文件4.2.1.html，代码如下：</p>
+<div> <p>&lt;!doctype html&gt;<br />
+    &lt;html&gt;<br />
+    &lt;head&gt;<br />
+    &lt;meta charset=&quot;utf-8&quot;&gt;<br />
+    &lt;title&gt;绘制文字&lt;/title&gt;<br />
+    &lt;/head&gt;<br />
+    &lt;body&gt;<br />
+    &lt;canvas id=&quot;mycanvas&quot; width=&quot;300&quot; height=&quot;150&quot; style=&quot;border:1px solid #d3d3d3&quot;&gt;<br />
+    &lt;/canvas&gt;<br />
+    &lt;script&gt;<br />
+    var c= document.getElementById(&quot;mycanvas&quot;);<br />
+    var cxt= c.getContext(&quot;2d&quot;);<br />
+    var gradient = cxt.createLinearGradient(0,0,c.width,0);<br />
+    gradient.addColorStop(0,&quot;magenta&quot;);<br />
+    gradient.addColorStop(0.5,&quot;blue&quot;);<br />
+    gradient.addColorStop(1,&quot;red&quot;);<br />
+    cxt.fillStyle=gradient;<br />
+    cxt.font= &quot;30px Verdana&quot;;<br />
+    cxt.fillText(&quot;好好学习，天天向上&quot;,15,75);<br />
+    &lt;/script&gt;<br />
+    &lt;/body&gt;<br />
+    &lt;/head&gt;</div>
+
+
+<a href="/example?id=4/4-2-1" target="_blank">点击查看实例</a><br />
+</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+<canvas id="mycanvas" width="300" height="150" style="border:1px solid #d3d3d3">
+</canvas>
+<script>
+var c= document.getElementById("mycanvas");
+var cxt= c.getContext("2d");
+var gradient = cxt.createLinearGradient(0,0,170,0);
+gradient.addColorStop(0,"blue");
+gradient.addColorStop(0.5,"green");
+gradient.addColorStop(1,"red");
+cxt.strokeStyle=gradient;
+cxt.lineWidth=5;
+cxt.moveTo(20,80);
+cxt.lineTo(260,80);
+cxt.stroke();
+</script>
+</body>
+</html>

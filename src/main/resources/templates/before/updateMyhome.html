@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link th:href="@{../../static/css/before/bootstrap.min.css}" rel="stylesheet">
+        <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css}">
+        <link th:href="@{../../static/css/before/style.css}" rel="stylesheet">
+        <link th:href="@{../../static/css/before/Myself.css}" rel="stylesheet">
+    </head>
+    <body>
+    <div th:replace="before/include/include :: header"></div>
+        <form action="/updateUser" method="post" class="basic-grey">
+            <h1>个人信息
+                <span>请填入信息</span>
+            </h1>
+            <label>
+                <span>学院</span>
+                <select id="words" name="themplate">
+                    <option value="IE">信息科学与工程学院</option>
+                    <option value="MX">马克思主义学院</option>
+                    <option value="FI">外国语学院</option>
+                    <option value="MATH">数学学院</option>
+                    <option value="LIFE">生命科学学院</option>
+                    <option value="SPORT">体育学院</option>
+                    <option value="TEACHER">教师教育学院</option>
+                    <option value="History">历史与社会发展学院</option>
+                    <option value="PE">物理与电子工程学院</option>
+                    <option value="FA">美术学院</option>
+                    <option value="Art">文学院</option>
+                    <option value="AI">人工智能产业学院</option>
+                    <option value="EC">经济与管理学院</option>
+                    <option value="CH">化学化工学院</option>
+                    <option value="Education">继续教育学院</option>
+                    <option value="Music">音乐学院</option>
+                </select>
+            </label>
+            <label>
+                <span>姓名 :</span>
+                <input id="name" type="text" name="name" placeholder="Your Full Name" />
+            </label>
+            <label>
+                <span>班级 :</span>
+                <input id="classes" type="text" name="classes" placeholder="Valid Email Address" />
+            </label>
+            <label>
+                <span>&nbsp;</span>
+                <input type="submit" class="button" value="Send" />
+            </label>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>HTML5多线程概述</h1>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浏览器以良好的表现形式展示数据，但在使用浏览器的同时也会碰到许多问题，比如浏览器启动缓慢、延迟、崩溃等，这在用户体验上带来了不好的一面。HTML5规范在一些表现不尽如人意的方面做了改善。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通常来说，浏览器处理事情的机制是顺序执行的，在某个时刻只能做一件事情。处理一个工作任务必须在浏览器中进行，处理完毕后才能进行下一个，这无疑使用的都是浏览器本身的CPU、堆栈、内存等资源，浏览器的任务相当繁重。而HTML5多线程定义了一组API，它允许Web应用程序生成一个和主页面并行运行的线程，又称为Web Workers。简单说，Web Workers是一种机制，它将JavaScript程序放到后台运行，同时又不占用浏览器的线程资源，而是使用客户端操作系统的线程资源实现多线程的机制。Web Workers在后台运行，与页面的交互以消息传递作为协调机制，同时又不依赖于任何的用户界面脚本，这就允许Web Workers可作为长时间运行的脚本，通过响应点击或其他用户交互的脚本而不会中断，同时也可以作为一项长期任务一直保持页面响应。通常来讲，WebWorkers用来处理长期的、高启动成本的和每个实例占用高内存开销的任务。
+    网页中的 JavaScript程序代码从用途看可以分为两部分:一部分用于响应用户单击或者其他的交互操作，另一部分用于执行复杂的数据运算。后者与前者分离开并放到后台运行，以此来提高页面性能。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML5 web Workers可以让:Web应用程序具备后台处理能力。它对多线程的支持性较好，因此使用了HTML5的JavaScript应用程序可以充分利用多核CPU带来的优势，将耗时长的任务分配给HTML5 Web Workers执行。有一点需要注意，尽管Web Workers 功能强大，但也不是万能的，有些事情它还做不到，例如，在 Web Workers 中执行的脚本不能访问该页面的Window对象(Window.document)。换句话说，Web Workers不能直接访问Wcb页面和 DOM API。虽然Web Workers不会导致浏览器UI停止响应，但是在某些情况下它跟普通的线程一样仍然会剧烈消耗CPU周期，导致系统反应缓慢。</p>
+</p>
+</body>
+</html>

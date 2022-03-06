@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h2>4.4阴影效果</h2>
+
+<p>如果要在Canvas中绘制出阴影效果，需要用到以下4个属性:</p> <p>shadowOfisetX、shadowOffsetY、 shadowBlur 和shadowColor,其基本用法如下:</p>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;context.shadowOffsetX=float;<br />
+
+    &nbsp;&nbsp;&nbsp;&nbsp;context.shadowOffsetY=float;<br />
+
+    &nbsp;&nbsp;&nbsp;&nbsp;context.shadowBlur=float;<br />
+
+    &nbsp;&nbsp;&nbsp;&nbsp;context.shadowColor=color,<br /></div>
+
+<p>其中，shadowOffsetX为阴影的水平偏移，shadowOffsetY为阴影的垂直偏移，默认值都是0，正值表示向下向右延伸，负值表示向上向左延伸: shadowBlur为阴影羽化的程度，默认值为0；shadowColor为阴影的颜色.</p>
+<p>绘制阴影效果。</p>
+<p><br />
+
+    创建HTML文件，代码如下：<br />
+</p>
+<div>&lt;!doctype html&gt;<br />
+    &lt;html&gt;<br />
+    &lt;head&gt;<br />
+    &lt;meta charset=&quot;utf-8&quot;&gt;<br />
+    &lt;title&gt;阴影效果&lt;/title&gt;<br />
+    &lt;/head&gt;<br />
+    &lt;body&gt;<br />
+    &lt;canvas id=&quot;mycanvas&quot; width=&quot;300&quot; height=&quot;150&quot; style=&quot;border:1px solid #d3d3d3&quot;&gt;<br />
+    &lt;/canvas&gt;<br />
+    &lt;script&gt;<br />
+    var c= document.getElementById(&quot;mycanvas&quot;);<br />
+    var cxt= c.getContext(&quot;2d&quot;);<br />
+    cxt.shadowBlur=30;<br />
+    cxt.shadowColor=&quot;black&quot;;<br />
+    cxt.fillStyle= &quot;green&quot;;<br />
+    cxt.fillRect(20,20,100,70);<br />
+    &lt;/script&gt;<br />
+    &lt;/body&gt;<br />
+    &lt;/head&gt;<br />
+</div>
+<br />
+
+<a href="/example?id=4/4-4-1" target="_blank">点击查看实例</a><br />
+</body>
+</html>

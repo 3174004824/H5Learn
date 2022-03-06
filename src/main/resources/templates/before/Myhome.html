@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link th:href="@{../../static/css/before/bootstrap.min.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css}">
+    <link th:href="@{../../static/css/before/style.css}" rel="stylesheet">
+    <link th:href="@{../../static/css/before/Myself.css}" rel="stylesheet">
+</head>
+<body>
+<div th:replace="before/include/include :: header"></div>
+
+    <div align="center">
+            <span>
+            <h1>个人信息</h1>
+                <span>
+                    学院: <span th:text="${session.get('user').getCollege()}"></span>
+                </span>
+            <br>
+                <span>
+                    姓名: <span th:text="${session.get('user').getName()}"></span>
+                </span>
+            <br>
+                <span>
+                    班级: <span th:text="${session.get('user').getClasses}"></span>
+                </span>
+            <br>
+                <span>
+                    账号: <span th:text="${session.get('user').getAccount()}"></span>
+                </span>
+        </span>
+        <a href="/toupdate">更改信息</a>
+        <a href="/quit">退出</a>
+    </div>
+</body>
+</html>

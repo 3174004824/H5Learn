@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>11.2</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>11.2背景和边框</h1>
+<p>CSS3增加了对元素背景和边框的控制，可以实现丰富的页面效果。</p>
+<p class="STYLE1">11.2.1多色边框  </p>
+<p>设置容器的边框颜色用border-color?这个属性，该属性的特点是:可以同时设置多个颜色，每种颜色显示1像素的宽度，如果边框宽度是40像素，但只设置了10种颜色，那么最后一个颜色将在剩下的宽度中显示。</p>
+
+<p>CSS3增强了这个属性的功能，使用它可以为边框设置多样的效果，而且在原有的基础上派生了4个边框颜色属性，具体如下:</p>
+
+<p>border-top-color:定义顶部边框的色彩。</p>
+
+<p>border-left-color:定义左侧边框的色彩。</p>
+
+<p>border-right-color:定义右侧边框的色彩。</p>
+<p>border-bottom-color:定义底部边框的色彩。</p>
+
+<p class="STYLE1">11.2.2边框背景图片</p>
+<p>在CSS3之前，如果要设置图片边框，那么需要为每条边单独使用一幅图像，这种做法非常麻烦。针对这种情况，CSS3?增加了一个border-image属性，可以使用一张图片实现边框的背景设置，减少了开发人员的工作量。</p>
+<p>border-image属性的基本语法如下:</p>
+
+<p>borderimage:none|&lt;image&gt;[&lt;number&gt;|&lt;percentage&gt;] </p>
+
+<p>参数说明如下:</p>
+
+<p>none:默认值，表示边框无背景图。</p>
+
+<p><image>:使用绝对或相对URL地址指定边框的背景图片。</p>
+<p><number>:设置边框宽度或边框背景图片大小，单位为像素。</p>
+<p><percentage>:设置边框背景图像大小，单位为百分比。</p>
+<p class="STYLE1">11.2.3圆角边框</p>
+
+<p>在设计页面的时候经常会用到圆角边框，CSS3之前只能使用图像文件才能达到效果有CSS3后，只需编写样式就可以设计出圆角边框。</p>
+
+<p>CSS3定义了border-radius属性，使用它可以设计出圆角边框，其基本语法如下:brder-radius:none|&lt;length&gt;[&lt;/lengh&gt;)]</p>
+
+<p>参数说明如下:</p>
+
+<p>none:默认值，表示元素没有圆角。</p>
+
+<p>length:长度值，不可为负数。</p>
+
+<p>为了更详细地定义元素的4个角，brderadus?属性派生了4个子属性:border-top-right-radius:</p>
+
+<p>border-top-lefi-adius:定义左上角的圆角。</p>
+
+<p>border-bottom-right-radius:定义右下角的圆角。</p>
+
+<p>border-bottom-eft-radius:定义左下角的圆角。</p>
+
+<p>border-radius属性可包含两个参数值:第一个表示圆角的水平半径，第二个表示圆角的垂直半径，两个参数通过斜线分割。如果仅设置一个值，?则第二个值与第一个值相同，表示这个角是个14圆角。如果参数值中包含0,则这个角就是直角。</p>
+
+<p class="STYLE1">11.2.4设计阴影</p>
+
+<p>在CSS3中，可以使用box-shadow属性为元素添加阴影效果。该属性值包含6个参数:阴影类型、X轴位移、Y轴位移、阴影大小、阴影扩展和阴影颜色。这6个属性并不要求同时出现。</p>
+
+<p>如果不设置阴影类型，则默认为投影效果;当设置阴影类型为inset?时，则为内阴影。如果没有设置阴影大小，必须用box-shadow设置阴影的位移量，否则没有效果。如果定义了阴影大小，则阴影位移设为0才能看到效果。</p>
+
+<p class="STYLE1">11.2.5设计背景</p>
+
+<p>CSS3增强了background属性的功能，使设计网页背景效果变得更加方便灵活，而且允许在同一个元素内叠加多个背景图像。</p>
+
+<p>CSS3新增了4个与背景相关的属性:</p>
+
+<p>background-clip:指定背景的显示范围。</p>
+
+<p>background-origin:指定绘制背景图像时的起点。</p>
+
+<p>background-size:指定背景中图像的尺寸。</p>
+
+<p>background-break:指定内联元素的背景图像进行平铺时的循环方式。</p>
+
+<p>1.background-origin</p>
+
+<p>background-origin属性定义background-position属性的参考位置。默认情况下，background-position属性总是以元素左上角为坐标原点定位背景图像，使用background-origin属性可以改变这种定位方式。该属性的基本语法如下:</p>
+
+<p>background-origin:padding-boxiborder-boxicontent-box;</p>
+<p>2.定义多背景图像</p>
+
+<p>CSS3可以实现在一个元素中同时显示多个背景图像，这使得背景图像的调整变得更加方便。</p>
+
+
+<p class="STYLE1">11.2.6透明背景色</p>
+
+<p>RGBA色彩模式是RGB色彩模式的扩展，在红、绿、蓝三种原色的基础上增加了透明度参数，语法格式如下:</p>
+
+<p>rgba:(r,g,b,&lt;opacity&gt;);</p>
+
+<p>其中，&lt;opacity&gt;表示透明度，取值在0~1之间，0表示全透明，1表示不透明。</p>
+
+</body>
+</html>

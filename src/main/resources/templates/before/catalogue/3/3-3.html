@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+
+<h1>3.3新的表单域属性</h1>
+
+<p>HTML5新增了一些表单域属性，用于控制表单域的行为，验证表单域的数据合法性，可以有效改善用户体验。
+</p>
+<h2>3.3.1 autofocus 属性</h2>
+
+<p>autofocus属性是一个布尔类型的属性，设有该属性的输入域在页面加载完成后浏览器自动定位到该输入域，用户可以直接进行编辑。
+</p>
+<div>< form action="#" method="post"><br />
+
+    < p>       1:< input type="text" name="txt1"/></p><br />
+
+    < p>       2:< input type="text" name="txt2"/></p><br />
+
+    < p>       3:< input type="text" name="txt3"/></p><br />
+
+    < input type="submit" value="提交"/><br />
+
+    < /form></div>
+<a href="/example?id=3/3-3-1" target="_blank">点击查看实例</a>
+
+<h2>3.3.2 form 属性</h2>
+
+<p>form属性用于指定当前输入域所属的表单，通过设定该属性，可以指定某个输入域属于多个表单。属于多个表单时，不同form之间用空格分开。设置form属性后，该输入域可以不在表单标签的作用范围内。</p>
+
+其中infoagejsp的主要代码如下:<br /><br />
+
+
+
+姓名: < %=request getParameter("txtname")%>< br><br />
+
+年龄: < %=request getParanmeter("txtage")%><br />
+
+
+
+<h2>3.3.3 formaction 属性</h2>
+
+<p>formaction 属性一般用于submit按钮，作用是指向一个url地址。当提交form时，浏览器会根据该地址请求消息处理。formaction属性会覆盖form的aciton 属性。
+</p>
+<h2>3.3.4 formenctype 属性</h2>
+
+<p>表单的enctype属性规定表单数据在发送到服务器之前应该如何进行编码。在HTML5 中，对于submit和image类型的表单域，如果以post方式提交请求，可以使用
+    formenctype属性重新指定表单域的编码方式。下面的示例中，表单的enctype属性默认值为“application/x-www- form-urlencoded”,“二进制”按钮的编码方式重新被定义为"multipart/form-data"。</p>
+
+<h2>3.3.5 formmethod 属性</h2>
+<p>formmethod属性用于指定表单的提交方式，该属性可以应用于submit 和image类型的表单域。当表单域的formmethod 属性与表单的method 属性冲突时，以表单域的formmethod属性为准。
+</p>
+<h2>3.3.6 formnovalidate 属性</h2>
+
+<p>formnovalidate属性作用于"submit"按钮，设置该属性后，单击按钮提交表单时会覆盖表单的novalidate属性。
+</p>
+<h2>3.3.7 formtarget 属性</h2>
+
+<p>formtarget属性作用于submit和image类型的表单域，用于指定表单提交时的目标窗口。表单域的formtarget属性会覆盖表单的target属性。
+</p>
+<h2>3.3.8 height和width属性</h2>
+
+<p>height和width属性用于指定表单域的高度和宽度，当前只能应用于image类型的表单域。下面的代码中有两个image表单域，第二个image表单域使用height和width属性来设定图片显示的大小。
+</p>
+<h2>3.3.9 list属性</h2>
+
+<p>list属性用于指定表单域的下拉列表选项，其值等于datalist元素的id属性值。下面的代码定义了一个书籍列表，当单击教材名称输入框右侧的下拉按钮时，显示该书籍列表。
+</p><h2>3.3.10 min和max属性</h2>
+
+<p>min和max属性用于指定表单域的输入值范围，这两个属性只能应用于类型为number. range. date. datetime. datetimelocal. month. time 和week的表单域。
+</p>
+<h2>3.3.11 multiple属性</h2>
+
+<p>multiple属性是布尔类型的属性，作用于file和email类型的表单域。file 类型表单城设定该属性时，可以选择多个文件: email类型表单域设定该属性时，可以输入多个email邮箱地址。
+</p>
+<h2>3.3.12 pattern 属性</h2>
+
+<p>patter属性用于给表单域设置一个正则表达式，以限制用户输入的内容。该属性可以应用于text、searchurl、tel、email和password类型的表单域。</p>
+
+<h2>3.3.13 placeholder 属性</h2>
+
+<p>placeholder属性用于指定一一个字符串， 被指定的字符串作为-一个提示信息显示在表单域中，该提示信息一-般是浅灰色， 与用户输入的信息有所区别。当用户输入信息后，提示信息消失。placeholder 属性可以应用于text、Search、Password、rl、tel 和email类型的表单域。</p>
+<h2>3.3.14 required 属性</h2>
+
+<p>required属性用于指定表单城在提交之前必须输入值，该属性可以应用于text、searchurl、 tel、 email、password、date、pickers、Number、checkbox、 radio和file类型的表单域。</p>
+<h2>3.3.15 step 属性</h2>
+
+<p>step属性用于指定表单域的数值间隔，该属性可以应用于number、range. Date、datetime、datetime-local、month、time和week类型的表单域。</p>
+</body>
+</html>

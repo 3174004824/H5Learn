@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+	<body  id="page-top">
+		<div th:fragment="header">
+			<nav class="navbar navbar-default">
+					<div class="container">
+						<div class="navbar-header page-scroll">
+							<a class="navbar-brand page-scroll" th:href="@{#page-top}"><img th:src="@{../../../static/images/logo.png}" alt="Treviso theme logo"></a>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li class="hidden">
+									<a th:href="@{#page-top}"></a>
+								</li>
+								<li>
+									<a class="page-scroll" href="/index" target="_parent">首页</a>
+								</li>
+								<li>
+									<a class="page-scroll" href="/showAllCustomer" target="_parent">视频</a>
+								</li>
+								<li>
+									<a class="page-scroll" href="/showFile" target="_parent">文件</a>
+								</li>
+								<li>
+									<a class="page-scroll" href="/login" th:if="${session.get('user') == null}" target="_parent">登陆</a>
+
+									<a class="page-scroll" href="/myhome" th:if="${session.get('user') != null}" th:text="${session.get('user').getName()}" target="_parent"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+		</div>
+	</body>
+</html>

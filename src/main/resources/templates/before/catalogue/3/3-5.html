@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>3.5新的form属性</h1>
+
+
+<p>HTML5的form表单增加了-些新的属性，以方便开发者控制表单行为。</p>
+<h2>3.5.1 autocomplete 属性</h2>
+
+<p>autocomplete属性用于设置一个表单中的输入域是否拥有自动完成功能，当设置为“on”时，浏览器会根据用户输入的值显示可用的选项，选项的内容是根据用户之前录入的内容确定的。表单的autocomplete属性可以作用于text、Search、Rul、email等表单域。</p>
+<div>< form action="#" method="post" autocomplete ="on">
+    <p>    姓名：< input type="text" name="userName"/></p>
+    <p>    密码：< input type="password" name="userName"/></p>
+    < input type="submit" value="提交"/>
+    < /form></div><br />
+<a href="/example?id=3/3-5-1" target="_blank">点击查看实例</a>
+<h2>3.5.2 novalidate 属性</h2>
+
+<p>novalidate属性是布尔类型的属性，当设置表单属性</p>
+<p>为novalidate时，表单提交后，辅入域中输入的值不会被校验，如email类型的表单域不会要求必须包含“@"字母。</p>
+<div>< form action="#" method="post" novalidate="novalidate"><br />
+
+    电子邮箱：< input type="email" name="txtemail" /><br />
+
+    < input type="submit" value="提交"/></div><br />
+
+<a href="/example?id=3/3-5-2" target="_blank">点击查看实例</a>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+
+<body>
+<h1>4.5动画效果</h1>
+<p>绘制时钟动画效果</p>
+<p>代码如下：</p>
+<P>< !doctype html></P>
+<p>< html></p>
+<p>< head></p>
+<p>< metal charset="utf-8"></p>
+<p>< title>动画效果< /title></p>
+<p>< /head></p>
+<p>< body></p>
+<P>< canvas id="myCanvas"width="600"height="600"></P>
+<P>< /canvas></P>
+<p>< script></p>
+<p>function drawClock(){</p>
+<p>var now=new Date();</p>
+<p>var hour=now.getHours(),</p>
+<p>m=now.getMinutes(),</p>
+<p>s=now.getSeconds();</p>
+<p>hour=hour>=12? hour-12:hour;</p>
+<p>var c=document.getElementById("myCanvas");</p>
+<p>var ctx=c.getContext("2d");</p>
+<p>ctx.save();</p>
+<p>ctx.clearRect(0,0,400,400);</p>
+<p>ctx.translate(140,140);</p>
+<p>ctx.rotate(-Math.PI/2);</p>
+<p>ctx.strokeStyle="red";</p>
+<p>ctx.lineWidth=2;</p>
+<p>ctx.lineCap="square";</p>
+<p>ctx.save();</p>
+<p>ctx.beginPath();</p>
+<p>for(var i=0;i<12;i++){</p>
+<p>ctx.rotate(30*Math.PI/180);</p>
+<p>ctx.moveTo(110,0);</p>
+<p>ctx.lineTo(120,0);</p>
+<p>}</p>
+<p>ctx.stroke();</p>
+<p>ctx.restore();</p>
+<p>ctx.save();</p>
+<p>ctx.beginPath();</p>
+<p>for(var i=0;i<60;i++){</p>
+<p>ctx.rotate(6*Math.PI/180);</p>
+<p>ctx.moveTo(117,0);</p>
+<p>ctx.lineTo(120,0);</p>
+<p>}</p>
+<p>ctx.stroke();</p>
+<p>ctx.restore();</p>
+<p>ctx.save();</p>
+<p>ctx.beginPath();</p>
+<p>ctx.rotate((30*Math.PI/180)*(hour+m/60+s/3600));</p>
+<p>ctx.lineWidth=5;</p>
+<p>ctx.moveTo(0,0);</p>
+<p>ctx.lineTo(60,0);</p>
+<p>ctx.strokeStyle="#000000";</p>
+<p>ctx.stroke();</p>
+<p>ctx.restore();</p>
+<p>ctx.save();</p>
+<p>ctx.beginPath();</p>
+<p>ctx.rotate((6*Math.PI/180)*(m+s/60));</p>
+<p>ctx.lineWidth=3;</p>
+<p>ctx.moveTo(0,0);</p>
+<p>ctx.lineTo(75,0);</p>
+<p>ctx.strokeStyle="#1ca112";</p>
+<p>ctx.stroke();</p>
+<p>ctx.restore();</p>
+<p>ctx.save();</p>
+<p>ctx.beginPath();</p>
+<p>ctx.rotate(6*Math.PI/l80*s);</p>
+<p>ctx.lineWidth=1;</p>
+<p>ctx.moveTo(0,0);</p>
+<p>ctx.lineTo(90,0);</p>
+<p>ctx.strokeStyle="#ff6b08";</p>
+<p>ctx.stroke();</p>
+<p>ctx.restore();</p>
+<p>ctx.save();</p>
+<p>ctx.beginPath();</p>
+<p>ctx.lineWidth=2;</p>
+<p>ctx.strokeStyle="#fc4e19";</p>
+<p>ctx.arc(0,0,125,0,2*Math.PI);</p>
+<p>ctx.stroke();</p>
+<p>ctx.restore();</p>
+<p>ctx.restore();</p>
+<p>}</p>
+<p>windows.onload=function(){</p>
+<p>setInterval(drawClock,1000);</p>
+<p>};</p>
+<p>< /script></p>
+<p>< /body></p>
+<p>< /html></p>
+<a href="/example?id=4/4-5-1" target="_blank">点击查看实例</a>
+</body>
+</html>

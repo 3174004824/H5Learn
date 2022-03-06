@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>移动设备页面匹配</h1>
+<h2>移动端与传统的PC端Web开发最大区别之一就是屏幕的适配问题。目前市面上的手机屏幕大小不一，为了能够获得更好的用户体验，在开发移动Web应用时，需要花费更多时间来处理手机页面的适配问题。</h2>
+<h3>1.添加viewport属性,向页面添加“viewport”属性，content的参数含义如下:</h3>
+<p>width:页面宽度，可以指定为一个具体的值或者特殊的值，device-width表示与设备屏幕同宽.</p>
+<p>height:同width，表示页面高度，通常不对其进行设置;</p>
+<p>initial-scale:页面初始缩放比例，取值范围为0.01~10;</p>
+<p>minimum-scale:页面最小缩放比例，取值范围为0.01~10;</p>
+<p>maximum-scale:页面最大缩放比例，取值范围为0.01~10;</p>
+<p>user-scalable:是否允许用户进行缩放，其值如果为no，则 minimum-scale和 maximum-scale都将无效。</p>
+<h3>2.对背景图片的处理</h3>
+<p>Web页面中添加的背景图片默认以平铺的方式显示，因手机屏幕大小不一，会直接影响页面显示效果，为了能够更直接地观察到效果，需要特殊处理。
+<h3>3.对img标签的处理</h3>
+<p>在Web页面中插入图片时，如果此图片的宽度大于手机屏幕的宽度，即便是设置了viewport属性，图片也不会自动缩放，此时，只能通过手势滑动的方式查看被遮挡的部分，这也会影响用户体验。
+
+</p>
+</p>
+</body>
+</html>

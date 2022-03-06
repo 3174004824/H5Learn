@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{color: #3e8f3e;text-decoration: underline}
+        h2{color: #3e8f3e;text-decoration: underline}
+        h3{color: #4cae4c;text-decoration: underline}
+        h4{color: #5FB878;text-decoration: underline}
+    </style>
+</head>
+<body>
+<h1>4.1绘制图形</h1>
+
+<p>HTML5新增了Canvas元素，支持通过JavaScript脚本绘制直线、矩形、圆形等基本图形，也可以在画布上输出文字、显示图像，通过对各种元素的组合，可以设计丰富多彩的页面。
+</p>
+<h2>4.1.1 什么是Canvas</h2>
+
+<p>✧Canvas 元素是HTMLS新增的专门用来绘制图形的元素；<br />
+
+<p>✧Canvas 元素使用JavaScript在网页上绘制图像
+</p>
+<p>✧Canvas 元素是一个矩形区域，用户可以控制区域内每一像素；
+</p>
+<p>✧Canvas元素拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。
+</p>
+</p>
+<h2>4.1.2 如何使用Canvas绘制图形</h2>
+
+<p>(1)创建Canvas元素。在HTMLS代码中添加Canvas元素，并规定元素的id.宽度和高度。代码如下:</p>
+
+<div>< canvas id="myCanvas" width="300" height="150">< /canvas></div><br />
+
+<p>(2)获取Canvas元素。通过JavaScript根据id获取Canvas元素。代码如下:|
+</p>
+<div>var c = document. getElemnentByld("myCanvas);</div><br />
+
+<p>(3)获取上下文。通过getContext方法获取上下文，即创建Context对象。代码如下:
+</p>
+<div>var cxt=c.getContext("2d");</div><br />
+
+<p>(4)绘制图形。例如，绘制一个用红色填充的矩形的代码如下:
+</p>
+<div>  cxt.fillSTyle="red";<br />
+
+    txtfillRect("10,10,100，50）</div></p>
+
+<h2>4.1.3 绘制直线</h2>
+<p>[示例4.1]绘制一条直线。</p><br />
+创建HTML文件gradientline.html,代码如下:<br />
+
+
+
+<div>&lt;!doctype html&gt;<br />
+    &lt;html&gt;<br />
+    &lt;head&gt;<br />
+    &lt;meta charset=&quot;utf-8&quot;&gt;<br />
+    &lt;title&gt;绘制直线&lt;/title&gt;<br />
+    &lt;/head&gt;<br />
+    &lt;body&gt;<br />
+    &lt;canvas id=&quot;mycanvas&quot; width=&quot;300&quot; height=&quot;150&quot; style=&quot;border:1px solid #d3d3d3&quot;&gt;<br />
+    &lt;/canvas&gt;<br />
+    &lt;script&gt;<br />
+    var c= document.getElementById(&quot;mycanvas&quot;);<br />
+    var cxt= c.getContext(&quot;2d&quot;);<br />
+    cxt.strokeStyle = &quot;red&quot;;<br />
+    cxt.moveTo(20,80);<br />
+    cxt.lineTo(260,80);<br />
+    cxt.stroke();<br />
+    &lt;/script&gt;<br />
+    &lt;/body&gt;<br />
+    &lt;/html&gt;<br></div><br />
+
+
+<a href="/example?id=4/4-1-3" target="_blank">点击查看实例</a><br/>
+<br>
+
+设置绘制颜色为红色:<br />
+
+<div>  cxt.strokeStyle="red";</div>
+
+设置绘制线的起始点，两个参数分别代表起始点的x坐标与y坐标:<br />
+
+<div>  cxt.moveTo(20,80);</div>
+
+设置绘制线的结束点(该方法并不会创建线条):<br />
+
+<div>cxt.lineTo(260,80);</div>
+
+绘制已定义的路径: <br />
+
+<div>cxt.stroke();</div><br />
+
+
+<h2>4.1.4 绘制渐变线条</h2>
+<p>[示例4.2]绘制渐变线条。</p>
+
+创建HTML文件gradientline.html,代码如下:<br />
+<div>&lt;!doctype html&gt;<br />
+    &lt;html&gt;<br />
+    &lt;head&gt;<br />
+    &lt;meta charset=&quot;utf-8&quot;&gt;<br />
+    &lt;title&gt;无标题文档&lt;/title&gt;<br />
+    &lt;/head&gt;<br />
+    &lt;body&gt;<br />
+    &lt;canvas id=&quot;mycanvas&quot; width=&quot;300&quot; height=&quot;150&quot; style=&quot;border:1px solid #d3d3d3&quot;&gt;<br />
+    &lt;/canvas&gt;<br />
+    &lt;script&gt;<br />
+    var c= document.getElementById(&quot;mycanvas&quot;);<br />
+    var cxt= c.getContext(&quot;2d&quot;);<br />
+    var gradient = cxt.createLinearGradient(0,0,170,0);<br />
+    gradient.addColorStop(0,&quot;blue&quot;);<br />
+    gradient.addColorStop(0.5,&quot;green&quot;);<br />
+    gradient.addColorStop(1,&quot;red&quot;);<br />
+    cxt.strokeStyle=gradient;<br />
+    cxt.lineWidth=5;<br />
+    cxt.moveTo(20,80);<br />
+    cxt.lineTo(260,80);<br />
+    cxt.stroke();<br />
+    &lt;/script&gt;<br />
+    &lt;/body&gt;<br />
+    &lt;/html&gt;<br />
+</div><br />
+
+
+<a href="/example?id=4/4-1-4" target="_blank">点击查看实例</a><br /><br />
+
+<p>上述代码中使用cxt.createLinearGradient()方法创建线性的渐变对象，然后使用addColorStopO方法设置渐变的颜色，这里使用了蓝、绿、红三种颜色。
+    然后把渐变对象gradient 赋给strokeStyle,最后绘制渐变线条。
+</p>
+<h2>4.1.5 绘制矩形</h2>
+<p>[示例4.3]绘制一个矩形。</p>
+创建HTML文件rect.html代码如下:<br />
+<div>&lt;!doctype html&gt;<br />
+    &lt;html&gt;<br />
+    &lt;head&gt;<br />
+    &lt;meta charset=&quot;utf-8&quot;&gt;<br />
+    &lt;title&gt;绘制矩形&lt;/title&gt;<br />
+    &lt;/head&gt;<br />
+    &lt;body&gt;<br />
+    &lt;canvas id=&quot;mycanvas&quot; width=&quot;300&quot; height=&quot;150&quot; style=&quot;border:1px solid #d3d3d3&quot;&gt;<br />
+    &lt;/canvas&gt;<br />
+    &lt;script&gt;<br />
+    var c= document.getElementById(&quot;mycanvas&quot;);<br />
+    var cxt= c.getContext(&quot;2d&quot;);<br />
+    cxt.fillStyle=&quot;green&quot;;<br />
+    cxt.fillRect(30,30,100,50);<br />
+    &lt;/script&gt;<br />
+    &lt;/body&gt;<br />
+    &lt;/html&gt;<br /></div><br />
+
+
+<a href="/example?id=4/4-1-5" target="_blank">点击查看实例</a><br /><br />
+
+设置矩形填充的颜色为绿色(默认为黑色):<br />
+
+<div>cxt=Style = "green";</div><br />
+
+fillRect方法有四个参数，分别代表:矩形左上角x坐标、矩形左上角y坐标、矩形宽度、矩形高度。<br />
+<h2>4.1.6 绘制线性渐变的矩形</h2>
+
+<p>[示例4.4]绘制线性渐变的矩形。</p>
+创建HTML文件gradientrect.html,代码如下:<br />
+<div>&lt;!doctype html&gt;<br />
+    &lt;html&gt;<br />
+    &lt;head&gt;<br />
+    &lt;meta charset=&quot;utf-8&quot;&gt;<br />
+    &lt;title&gt;绘制线性渐变的矩形&lt;/title&gt;<br />
+    &lt;head&gt;<br />
+    &lt;body&gt;<br />
+    &lt;canvas id=&quot;mycanvas&quot; width=&quot;300&quot; height=&quot;150&quot; style=&quot;border:1px solid #d3d3d3&quot;&gt;<br />
+    &lt;/canvas&gt;<br />
+    &lt;script&gt;<br />
+    var c= document.getElementById(&quot;mycanvas&quot;);<br />
+    var cxt= c.getContext(&quot;2d&quot;);<br />
+    var gradient = cxt.createLinearGradient(0,0,170,50);<br />
+    gradient.addColorStop(0,&quot;#FF0000&quot;);<br />
+    gradient.addColorStop(1,&quot;#00FF00&quot;);<br />
+    cxt.fillStyle=gradient;<br />
+    cxt.fillRect(30,30,200,80);<br />
+    &lt;/script&gt;<br />
+    &lt;/body&gt;<br />
+    &lt;/head&gt;<br /></div>
+
+
+<a href="/example?id=4/4-1-6" target="_blank">点击查看实例</a><br /><br />
+
+
+<p>在示例4.3的基础上，把填充样式换成渐变对象就可以实现渐变效果，代码如下:</p>
+<div>CxtfillStyle = gradient;</div><br />
+
+<p> filltyle属性可以接受色值、渐变对象或模式。</p>
+<h2>4.1.7 绘制圆形和圆弧</h2>
+
+<p>绘制圆形或圆弧用到了arc(xyr,sAngle,eAngle,[counterclockwise])方法， 其中x、y是圆心的坐标: r是半径: sAngel、eAngle分别是起始角、结束角(以弧度计):参数[counterclockwise]可选，代表是逆时针还是顺时针绘图，false代表顺时针，true代表逆时针。</p>
+
+
+<div><p>&lt;!doctype html&gt;<br />
+    &lt;html&gt;<br />
+    &lt;head&gt;<br />
+    &lt;meta charset=&quot;utf-8&quot;&gt;<br />
+    &lt;title&gt;无标题文档&lt;/title&gt;<br />
+    &lt;/head&gt;</p>
+    <p>&lt;body&gt;<br />
+        &lt;canvas id=&quot;mycanvas&quot; width=&quot;300&quot; height=&quot;150&quot; style=&quot;border:1px solid #d3d3d3&quot;&gt;</p>
+    <p>&lt;script&gt;<br />
+        var c= document.getElementById(&quot;mycanvas&quot;);<br />
+        var cxt= c.getContext(&quot;2d&quot;);</p>
+    <p>cxt.beginPath();<br />
+        cxt.arc(70,70,50,0,2*Math.PI);<br />
+        cxt.stroke();<br />
+        cxt.closePath();</p>
+    <p>cxt.beginPath();<br />
+        cxt.arc(200,70,50,0,1*Math.PI);<br />
+        cxt.stroke();<br />
+        cxt.closePath();</p>
+    <p>&lt;/script&gt;<br />
+        &lt;/canvas&gt;<br />
+        &lt;/body&gt;<br />
+        &lt;/html&gt;</p>
+    <p><br /></div>
+
+
+<a href="/example?id=4/4-1-7" target="_blank">点击查看实例</a><br /><br />
+
+</p>
+<p>2*Math.PI代表绘制的是整个圆:如果要绘制一个半圆，可以改为1*Math.Pl;
+    如果要绘制四分之一圆弧，可以改为0.5*Math.Pl.</p>
+<p>设置一条路径的起始点或重置当前路径的代码如下:
+</p>
+cxt.beginPath();<br />
+
+<p>创建回到起始点路径的代码如下:</p>
+
+cxt.closePath();<br />
+
+</body>
+</html>
